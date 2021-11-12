@@ -1,0 +1,84 @@
+The final Decision Tree model and the Random Forest model both used the following features:
+
+balls                                   int64
+strikes                                 int64
+on_3b                                   int64
+on_2b                                   int64
+on_1b                                   int64
+outs_when_up                            int64
+inning                                  int64
+at_bat_number                           int64
+pitch_number                            int64
+home_score                              int64
+away_score                              int64
+bat_score                               int64
+fld_score                               int64
+stand_L                                 int64
+stand_R                                 int64
+p_throws_L                              int64
+p_throws_R                              int64
+inning_topbot_Bot                       int64
+inning_topbot_Top                       int64
+if_fielding_alignment_Infield shift     int64
+if_fielding_alignment_Standard          int64
+if_fielding_alignment_Strategic         int64
+of_fielding_alignment_4th outfielder    int64
+of_fielding_alignment_Standard          int64
+of_fielding_alignment_Strategic         int64
+
+
+The final Decision Tree parameters used:
+
+class_weight='balanced',
+criterion='gini',
+max_depth=5,
+max_features=20,
+min_weight_fraction_leaf=0.0
+
+
+The final Decision Tree performance metrics:
+
+              precision    recall  f1-score   support
+
+          CH       0.00      0.00      0.00        89
+          CU       0.25      0.51      0.34        55
+          FC       0.27      0.93      0.41        70
+          FF       0.47      0.03      0.06       220
+          FT       0.46      0.36      0.40       180
+          KC       0.44      0.73      0.55       114
+          SI       0.19      0.33      0.24        30
+          SL       0.46      0.48      0.47       177
+
+    accuracy                           0.37       935
+   macro avg       0.32      0.42      0.31       935
+weighted avg       0.38      0.37      0.31       935
+
+Balanced Accuracy: 0.4208331965635712
+Wall time: 76.9 ms
+
+
+The Random Forest parameters used:
+
+class_weight='balanced', 
+criterion='gini',
+max_depth=5,
+max_features=20,
+n_estimators=379
+
+
+The Random Forest performance metrics:
+
+              precision    recall  f1-score   support
+
+          CH       0.00      0.00      0.00        89
+          CU       0.26      0.49      0.34        55
+          FC       0.29      0.84      0.43        70
+          FF       0.50      0.01      0.02       220
+          FT       0.49      0.36      0.41       180
+          KC       0.42      0.89      0.57       114
+          SI       0.18      0.40      0.24        30
+          SL       0.48      0.49      0.48       177
+
+    accuracy                           0.38       935
+   macro avg       0.33      0.43      0.31       935
+weighted avg       0.40      0.38      0.30       935
